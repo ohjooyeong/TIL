@@ -31,7 +31,7 @@ memory는 CPU가 직접 접근할 수 있는 컴퓨터 내부의 기억장치입
 
 프로그램의 코드를 토대로 CPU가 실제로 연산을 해야만 프로그램이 실행된다고 볼 수 있습니다. 그럼 어떤 코드를 읽어야 하는가를 정하는 것은 CPU 내부에 있는 PC(Program counter) register에 저장되어 있습니다. PC register에는 다음에 실행될 코드(명령어, instruction)의 주소값이 저장되어 있습니다. 즉, memory에 적재되어있는 process code영역의 명령어 중 다음번 연산에서 읽어야할 명령어의 주소값을 PC register가 순차적으로 가리키게 되고, 해당 명령어를 읽어와서 CPU가 연산을 하게 되면 process가 실행되는 것입니다.
 
-### Q. process의 memory영역(cose, data, stack, heap)에 대해서 설명해주세요.
+### Q. process의 memory영역(code, data, stack, heap)에 대해서 설명해주세요.
 
 프로세스가 운영체제에서 할당받는 메모리 공간은 code, data, stack, heap 영역으로 구분됩니다.
 
