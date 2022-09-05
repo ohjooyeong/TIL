@@ -175,3 +175,21 @@ console.log(i); // i is not defined
 3. 변수 중복 선언 허용: 의도하지 않은 변수값의 변경이 일어날 가능성이 큽니다.
 
 4. 변수 호이스팅: 변수를 선언 이전에 참조가 가능합니다.
+
+### Q. const 객체 할당하면 객체 내부의 값 변경 가능한데 이유를 아는지?
+
+객체 저장은 reference
+
+```javascript
+const hiObj = {
+    name: "안녕",
+};
+const helloObj = {
+    name: "안녕",
+};
+console.log(hiObj === helloObj); //false
+```
+
+이런 결과가 나오는 이유는 객체를 변수에 저장할 때는, 객체 자체는 그대로 저장하지 않고, 객체가 담긴 메모리의 reference를 저장하기 때문입니다.
+
+> 객체는 메모리 주소인 reference를 값으로 가지고 있지만, 객체를 불러올 때는 메모리 주소의 reference 값이 아닌 해당 메모리에 저장된 데이터를 불러옵니다.
